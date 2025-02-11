@@ -16,9 +16,7 @@ The results of each race are used to calculate driver standings and constructor 
 
 ![WhatsApp Image 2025-02-11 at 17 29 27_49e2a0bb](https://github.com/user-attachments/assets/63ba9e67-d9cb-4b61-bfb6-998c97662c04)
 
-Here’s a more concise and structured version of your **Working Plan** while maintaining proper hierarchical headings for GitHub:  
 
----
 
 ## **Working Plan**  
 
@@ -62,7 +60,41 @@ We are using open-source data from the **Ergast Developer API**, covering **F1 r
 - **Azure Data Lake Storage (ADLS)**  
 - **Azure Data Factory (ADF)**  
 - **Azure Databricks**  
-- **Azure Key Vault**  
+- **Azure Key Vault**
+
+Here’s a concise and well-structured version for your **README.md**:  
+
+---
+
+## **Project Requirements**  
+
+#### **1. Data Ingestion**  
+- Ingest **8 files** into **Azure Data Lake** with a consistent schema.  
+- Store data in **Parquet format** with audit columns.  
+- Enable **SQL-based analysis** and **incremental load handling**.  
+
+#### **2. Data Transformation**  
+- Create new tables by **joining key data** for reporting and analysis.  
+- Store transformed data in **Parquet format** with audit columns.  
+- Support **incremental load handling** and SQL-based analysis.  
+
+#### **3. Data Reporting**  
+- Generate insights on **Driver Standings** and **Constructor Standings**.  
+
+#### **4. Data Analysis**  
+- Identify **dominant drivers and teams**.  
+- Create **visualizations and Databricks dashboards**.  
+
+#### **5. Scheduling & Monitoring**  
+- **Scheduled execution: Every Sunday at 10 PM**.  
+- Support **pipeline monitoring, failure alerts, and reruns**.  
+
+#### **6. Other Requirements**  
+- **Record deletion, history tracking, and rollback support**.  
+
+---
+
+This keeps it **clean, precise, and readable** for GitHub. Let me know if you need any modifications! 🚀
 
 
 
