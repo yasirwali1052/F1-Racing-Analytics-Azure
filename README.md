@@ -14,4 +14,55 @@ The results of each race are used to calculate driver standings and constructor 
 
 ## ER Diagram
 
-![WhatsApp Image 2025-02-11 at 17 28 00_f96e81b7](https://github.com/user-attachments/assets/f3fbb4b4-4e34-47fd-8ea0-5d40b2d0623d)
+![WhatsApp Image 2025-02-11 at 17 29 27_49e2a0bb](https://github.com/user-attachments/assets/63ba9e67-d9cb-4b61-bfb6-998c97662c04)
+
+Here’s a more concise and structured version of your **Working Plan** while maintaining proper hierarchical headings for GitHub:  
+
+---
+
+## **Working Plan**  
+
+#### **Source Data**  
+We are using open-source data from the **Ergast Developer API**, covering **F1 race data from 1950 to 2022**.  
+
+| **File Name**     | **File Type**              |  
+|------------------|--------------------------|  
+| Circuits        | CSV                        |  
+| Races           | CSV                        |  
+| Constructors    | Single Line JSON           |  
+| Drivers        | Single Line Nested JSON    |  
+| Results        | Single Line JSON           |  
+| PitStops       | Multi-Line JSON            |  
+| LapTimes       | Split CSV Files            |  
+| Qualifying     | Split Multi-Line JSON Files |  
+
+#### **Execution Overview**  
+- **Azure Data Factory (ADF)** orchestrates and monitors the pipeline.  
+- **Raw data** is ingested into **Azure Data Lake Storage Gen2 (ADLS)** (Bronze zone).  
+- **Azure Databricks** processes and converts data into **Delta tables** using upserts.  
+- Processed data moves to the **Silver zone** for further transformation (joining, aggregations).  
+- Final analytical tables are stored in the **Gold zone** for insights and reporting.  
+
+#### **ETL Pipeline**  
+##### **1. Ingestion (Bronze → Silver)**  
+- Reads JSON/CSV files using **Apache Spark**.  
+- Performs minimal transformation (schema enforcement, renaming, audit columns).  
+- Saves output as **Delta tables**.  
+
+##### **2. Transformation (Silver → Gold)**  
+- **Databricks SQL** processes and refines data.  
+- Removes duplicates, applies joins, and aggregates data.  
+- Generates final **dimensional model tables** in **Delta format**.  
+
+**Scheduling:**  
+- **ADF runs every Sunday at 10 PM**, skipping execution if no race occurred that week.  
+- Uses **file_date** as a parameter for dynamic execution.  
+
+#### **Azure Resources Used**  
+- **Azure Data Lake Storage (ADLS)**  
+- **Azure Data Factory (ADF)**  
+- **Azure Databricks**  
+- **Azure Key Vault**  
+
+
+
