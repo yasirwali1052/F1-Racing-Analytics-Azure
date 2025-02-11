@@ -106,3 +106,36 @@ Here’s a concise and well-structured version for your **README.md**:
 ![WhatsApp Image 2025-02-11 at 17 21 05_b44af7e2](https://github.com/user-attachments/assets/1983b629-142b-412c-8b08-622ae56e98c0)
 
 
+
+## **Tasks Performed**  
+
+#### **Solution Architecture & Development**  
+- Designed and implemented a **data engineering solution** using **Azure Databricks, Data Lake Gen2, Data Factory, and Power BI**.  
+- Configured **Azure Databricks service**, clusters, pools, and jobs.  
+- Created **Databricks notebooks**, used utilities, magic commands, and **notebook workflows**.  
+- Mounted **Azure Storage** using secrets from **Azure Key Vault**.  
+- Implemented **Lakehouse architecture** with **Delta Lake**.  
+- Built **Power BI dashboards** for data visualization.  
+
+#### **Spark & PySpark (ETL Processing)**  
+- Processed **CSV and JSON files** into **Parquet format** in **Data Lake**.  
+- Performed **joins, aggregations, filtering, window functions**, and created **views** in PySpark & Spark SQL.  
+- Developed **incremental load** patterns using **partitioning and Delta Lake**.  
+
+#### **Delta Lake**  
+- Performed **Read, Write, Update, Delete, Merge** operations on **Delta tables**.  
+- Enabled **History, Time Travel, Vacuum**, and **Parquet-to-Delta conversion**.  
+
+#### **Azure Data Factory (ADF) Pipelines**  
+- Developed pipelines to **execute Databricks notebooks**.  
+- Implemented **dependency handling, error monitoring, and scheduling** using ADF triggers.  
+- Managed **incremental and full refresh** ETL patterns.  
+
+### **Technologies & Tools Used**  
+✅ **PySpark, Spark SQL, Delta Lake**  
+✅ **Azure Databricks, Azure Data Factory, Azure Data Lake Gen2**  
+✅ **Azure Key Vault, Power BI**  
+
+
+
+
