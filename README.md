@@ -1,4 +1,9 @@
+
 # F1-Racing-Analytics-Azure
+![Uploading WhatsApp Image 2025-02-11 at 17.40.17_8d758fbb.jpg…]()
+
+
+## Summary
 This project demonstrates a complete ETL pipeline for Formula 1 racing data using Azure Databricks, Delta Lake, and Azure Data Factory. It covers data ingestion, transformation with PySpark and Spark SQL, data governance with Unity Catalog, and visualization through Power BI. Designed to showcase real-world data engineering workflows in Azure.
 ## Formula1 Overview
 Formula 1 (F1) is the highest level of single-seater auto racing worldwide and is governed by the FIA. It showcases advanced and powerful cars equipped with hybrid engines. The F1 season occurs once a year and consists of races that take place over the course of a weekend, typically from Friday to Sunday. These races are held at various circuits in different countries. In each race, there are 10 teams, each with two assigned drivers.
