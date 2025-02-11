@@ -1,6 +1,7 @@
 
 # F1-Racing-Analytics-Azure
-![Uploading WhatsApp Image 2025-02-11 at 17.40.17_8d758fbb.jpg…]()
+![Uploading mclaren-race-OG.og.png…]()
+
 
 
 ## Summary
